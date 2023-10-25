@@ -14,13 +14,13 @@ class XmlHeroDataSource (private val context: Context){
 
     private val gson = Gson()
 
-    fun getHero():Either<ErrorApp, Hero>{
+    fun getHeroFeed():Either<ErrorApp, List<Hero>>{
         return try {
             val jsonUsers = sharedPref.all as Map<String, String>
             val hero = jsonUsers.values.map {
                 gson.fromJson(it, Hero::class.java)
             }
-            return getHero()
+            return getHeroFeed()
         }catch (ex:Exception){
             return ErrorApp.UnknowError.left()
         }

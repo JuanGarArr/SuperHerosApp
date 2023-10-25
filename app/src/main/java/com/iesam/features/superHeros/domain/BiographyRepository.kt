@@ -6,8 +6,6 @@ import com.iesam.features.superHeros.domain.models.Biography
 
 interface BiographyRepository {
 
-    fun getBiograpgy(): Either<ErrorApp, Biography>
-
-    fun getBiograpgyFeed(): Either<ErrorApp, List<Biography>>
+    fun getBiograpgy(idHero:Int): Either<ErrorApp, Biography>
 
 }

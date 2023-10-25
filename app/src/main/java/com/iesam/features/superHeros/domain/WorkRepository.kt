@@ -5,8 +5,6 @@ import com.iesam.app.functional.Either
 import com.iesam.features.superHeros.domain.models.Work
 
 interface WorkRepository {
+    fun getWorkByHeroId(idHero:Int): Either<ErrorApp, Work>
 
-    fun getWork(): Either<ErrorApp, Work>
-
-    fun getWorkFeed(): Either<ErrorApp, List<Work>>
 }

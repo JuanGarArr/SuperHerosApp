@@ -6,8 +6,6 @@ import com.iesam.features.superHeros.domain.models.Hero
 
 interface SuperHeroRepository {
 
-    fun getHero():Either<ErrorApp, Hero>
-
-    fun getHeroFeed():Either<ErrorApp, List<Hero>>
+    suspend fun getHeroFeed():Either<ErrorApp, List<Hero>>
 
 }
