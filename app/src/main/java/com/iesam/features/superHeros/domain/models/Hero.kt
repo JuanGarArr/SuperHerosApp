@@ -4,8 +4,14 @@ data class Hero (
     val id : Int,
     val heroName : String,
     val biography: Biography,
-    val work: Work
-)
+    val work: Work,
+    val img:List<String>){
+        fun getUrlImageX():String=img[0]
+        fun getUrlImageS():String=img[1]
+        fun getUrlImageM():String=img[2]
+        fun getUrlImageL():String=img[3]
+    }
+
 
 
 data class Biography(

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SuperHeros</string>
+    <string name="heroName">Hero Name</string>
+    <string name="realName">RealName</string>
+    <string name="occupation">Occupation</string>
 </resources>
